@@ -1,5 +1,5 @@
 var util = require('util');
-var saveGoodsModel = require('../models/saveGoodsModel');
+var saveGoodsModel = require('../models/savegoodsmodel');
 var gm = require('gm');
 module.exports = {
 	save: async function(req, res) {

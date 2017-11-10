@@ -1,0 +1,280 @@
+{
+  "data": {
+    "customerId": 11073,
+    "idQueue": "",
+    "uid": "BohWXCjVqjUk2GTI255-lhlkXv4PbBuA5XowSnf6rfveMcWdmuZUZ6zT1++5zVLL01",
+    "weekPregnantList": [
+      {
+        "applyDate": "2016-07-19 16:20:35",
+        "checkDate": "2016-08-05",
+        "checkTime": "08:00-11:00",
+        "checkWeek": "星期五",
+        "itemList": [
+          {
+            "adeptCode": "",
+            "bookType": "3",
+            "deptCode": "",
+            "name": "门诊不预约科室",
+            "tip": "有B超检查，遵医嘱是否需要憋尿，不要饿着肚子去做检查"
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 6
+      },
+      {
+        "applyDate": "2016-08-09 15:41:59",
+        "checkDate": "2016-09-27",
+        "checkTime": "13:30-14:00",
+        "checkWeek": "星期二",
+        "itemList": [
+          {
+            "adeptCode": "201",
+            "bookType": "1",
+            "deptCode": "2101006",
+            "name": "产前初诊东院产科",
+            "tip": ""
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 14
+      },
+      {
+        "applyDate": "2016-09-27 16:26:24",
+        "checkDate": "2016-10-18",
+        "checkTime": "08:00-11:30",
+        "checkWeek": "星期二",
+        "itemList": [
+          {
+            "adeptCode": "201",
+            "bookType": "1",
+            "deptCode": "2101001",
+            "name": "产前复诊东院产科H组",
+            "tip": ""
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 17
+      },
+      {
+        "applyDate": "2016-09-27 14:35:54",
+        "checkDate": "2016-11-22",
+        "checkTime": "08:00-10:00",
+        "checkWeek": "星期二",
+        "itemList": [
+          {
+            "adeptCode": "",
+            "bookType": "3",
+            "deptCode": "",
+            "name": "产科大畸形筛查",
+            "tip": "有B超检查，遵医嘱是否需要憋尿，不要饿着肚子去做检查"
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 22
+      },
+      {
+        "applyDate": "2016-11-22 10:55:17",
+        "checkDate": "2016-12-20",
+        "checkTime": "08:00-09:00",
+        "checkWeek": "星期二",
+        "itemList": [
+          {
+            "adeptCode": "201",
+            "bookType": "1",
+            "deptCode": "2101001",
+            "name": "产前复诊东院产科H组",
+            "tip": ""
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 26
+      },
+      {
+        "applyDate": "2016-12-20 09:40:01",
+        "checkDate": "2017-01-17",
+        "checkTime": "10:00-11:30",
+        "checkWeek": "星期二",
+        "itemList": [
+          {
+            "adeptCode": "",
+            "bookType": "3",
+            "deptCode": "",
+            "name": "产科初/复诊检查",
+            "tip": "有B超检查，遵医嘱是否需要憋尿，不要饿着肚子去做检查"
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 30
+      },
+      {
+        "applyDate": "2017-01-17 10:11:17",
+        "checkDate": "2017-02-02",
+        "checkTime": "09:00-10:00",
+        "checkWeek": "星期四",
+        "itemList": [
+          {
+            "adeptCode": "201",
+            "bookType": "1",
+            "deptCode": "2101001",
+            "name": "产前复诊东院产科H组",
+            "tip": ""
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 32
+      },
+      {
+        "applyDate": "2017-02-02 11:15:29",
+        "checkDate": "2017-02-16",
+        "checkTime": "10:00-11:00",
+        "checkWeek": "星期四",
+        "itemList": [
+          {
+            "adeptCode": "201",
+            "bookType": "1",
+            "deptCode": "2101001",
+            "name": "产前复诊东院产科H组",
+            "tip": ""
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 34
+      },
+      {
+        "applyDate": "2017-02-16 14:41:59",
+        "checkDate": "2017-03-02",
+        "checkTime": "07:30-12:00",
+        "checkWeek": "星期四",
+        "itemList": [
+          {
+            "adeptCode": "201",
+            "bookType": "1",
+            "deptCode": "2101001",
+            "name": "产前复诊东院产科H组",
+            "tip": ""
+          },
+          {
+            "adeptCode": "",
+            "bookType": "3",
+            "deptCode": "",
+            "name": "产科初/复诊检查",
+            "tip": "有B超检查，遵医嘱是否需要憋尿，不要饿着肚子去做检查"
+          },
+          {
+            "adeptCode": "",
+            "bookType": "4",
+            "deptCode": "",
+            "name": "胎心监护",
+            "tip": "有胎心检查，记得吃饱了再去检查"
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 36
+      },
+      {
+        "applyDate": "2017-03-02 14:38:19",
+        "checkDate": "2017-03-09",
+        "checkTime": "12:00-16:30",
+        "checkWeek": "星期四",
+        "itemList": [
+          {
+            "adeptCode": "",
+            "bookType": "4",
+            "deptCode": "",
+            "name": "胎心监护",
+            "tip": "有胎心检查，记得吃饱了再去检查"
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 37
+      },
+      {
+        "applyDate": "2017-03-15 07:41:30",
+        "checkDate": "2017-03-15",
+        "checkTime": "00:00-23:59",
+        "checkWeek": "星期三",
+        "itemList": [
+          {
+            "adeptCode": "",
+            "bookType": "4",
+            "deptCode": "",
+            "name": "急诊胎监",
+            "tip": "有胎心检查，记得吃饱了再去检查"
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 38
+      },
+      {
+        "applyDate": "2017-03-09 14:37:13",
+        "checkDate": "2017-03-16",
+        "checkTime": "12:00-16:30",
+        "checkWeek": "星期四",
+        "itemList": [
+          {
+            "adeptCode": "",
+            "bookType": "4",
+            "deptCode": "",
+            "name": "胎心监护",
+            "tip": "有胎心检查，记得吃饱了再去检查"
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 38
+      },
+      {
+        "applyDate": "2017-03-16 16:42:48",
+        "checkDate": "2017-03-23",
+        "checkTime": "12:00-16:30",
+        "checkWeek": "星期四",
+        "itemList": [
+          {
+            "adeptCode": "",
+            "bookType": "3",
+            "deptCode": "",
+            "name": "产科初/复诊检查",
+            "tip": "有B超检查，遵医嘱是否需要憋尿，不要饿着肚子去做检查"
+          },
+          {
+            "adeptCode": "",
+            "bookType": "4",
+            "deptCode": "",
+            "name": "胎心监护",
+            "tip": "有胎心检查，记得吃饱了再去检查"
+          }
+        ],
+        "status": "1",
+        "weekPregnant": 39
+      },
+      {
+        "applyDate": "2017-04-04 19:22:24",
+        "checkDate": "2017-04-05",
+        "checkTime": "08:00-09:00",
+        "checkWeek": "星期三",
+        "itemList": [],
+        "status": "1",
+        "weekPregnant": 41
+      },
+      {
+        "applyDate": "2017-05-07 22:27:34",
+        "checkDate": "2017-05-08",
+        "checkTime": "13:30-16:00",
+        "checkWeek": "星期一",
+        "itemList": [],
+        "status": "1",
+        "weekPregnant": 46
+      },
+      {
+        "applyDate": "2017-07-24 21:36:12",
+        "checkDate": "2017-07-25",
+        "checkTime": "08:00-11:00",
+        "checkWeek": "星期二",
+        "itemList": [],
+        "status": "1",
+        "weekPregnant": 57
+      }
+    ]
+  },
+  "msg": "OK",
+  "ret": 1
+}

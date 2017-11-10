@@ -17,6 +17,7 @@ var routes = require('./routes/index')(app);
 var users = require('./routes/users');
 var goods = require('./routes/goods');
 var comments = require('./routes/comments');
+var mch = require('./routes/mch');
 mongoose.Promise = global.Promise;
 // Connect to mongodb
 var connect = function () {
@@ -65,7 +66,7 @@ app.use(cookieParser());
 app.use(session(sess));
 app.use(function(req, res, next) {  
   // res.header("Access-Control-Allow-Origin", "http://10.6.26.38:9001");
-  // res.header("Access-Control-Allow-Credentials", true);
+  res.header("Access-Control-Allow-Credentials", true);
   //console.log(req.cookies)
   res.locals.desc = 'this is the desc of the app';
   var ua = req.headers["user-agent"] + "@HTML5";
@@ -99,10 +100,10 @@ app.use(function(req, res, next) {
 //global.keywords = 'hello, world';
 
 
-// app.use(function(req, res, next) {
-//   if(req.session.user) req.session.cookie.maxAge = 60000;
-//   next()
-// })
+app.use(function(req, res, next) {
+  if(req.session.user) req.session.cookie.maxAge = 60000;
+  next()
+})
  
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -110,6 +111,7 @@ app.use('/api', routes);
 app.use('/api/users', users);
 app.use('/api/goods', goods);
 app.use('/api/comments', comments);
+app.use('/api/infanthospital/v1', mch);
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

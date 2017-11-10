@@ -7,7 +7,7 @@ var fs = require('fs');
 var path = require('path');
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    var dirpath = 'tmp/my-uploads/' + path.extname(file.originalname).slice(1);
+    var dirpath = 'resource/zone/' + path.extname(file.originalname).slice(1);
     mkdirsSync(dirpath); 
     cb(null, dirpath) 
   },

@@ -1,0 +1,14 @@
+{
+  "data": {
+    "checkDate": null,
+    "checkTime": "",
+    "checkWeek": "",
+    "isToday": "1",
+    "patientName": "万凌芝",
+    "patientNumber": "",
+    "queueList": [],
+    "weekPregnant": 69
+  },
+  "msg": "OK",
+  "ret": 1
+}

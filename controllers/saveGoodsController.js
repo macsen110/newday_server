@@ -1,6 +1,9 @@
 var util = require('util');
 var saveGoodsModel = require('../models/savegoodsmodel');
 var gm = require('gm');
+var setPath = function (path) {
+	return /^resource/.test(path) ? path.replace('resource', '') : ''
+}
 module.exports = {
 	save: async function(req, res) {
 		var result = {};
@@ -8,6 +11,7 @@ module.exports = {
 		var title = req.body.title;
 		var category = req.body.category;
 		var files = util.isArray(req.files) ? req.files : [req.files];
+		console.log(files)
 		var content = req.body.content;
 		if (!title && title === '') {
 			result = {
@@ -34,7 +38,7 @@ module.exports = {
 								var pathItem = {};
 								pathItem.width = size.width;
 								pathItem.height = size.height;
-								pathItem.path = item.path;
+								pathItem.path = setPath(item.path);
 								pathItem.id = 'item_' + index;
 								paths.push(pathItem);				  	
 								if (paths.length === files.length) res(saveGoodsModel.save(title, category, content, paths))
@@ -48,7 +52,7 @@ module.exports = {
 		else if (category === 'video') {
 			files.forEach(function (item, index) {
 				paths.push({
-					path: item.path
+					path: setPath(item.path)
 				})		
 			})
 			obj = await saveGoodsModel.save(title, category, content, paths)

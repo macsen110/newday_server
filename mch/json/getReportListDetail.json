@@ -1,0 +1,41 @@
+{
+  "data": {
+    "b_mode_phones": [],
+    "buttom_info": {
+      "diagnosis_prompt": ["1.单胎头位", "2.胎儿体重估测：3505g±400g。", "3.胎儿脐血流指数正常"],
+      "inspection_items": "子宫|附件|胎儿生长监测|胎儿脐血流|膀胱",
+      "inspection_time": "2017-03-16",
+      "ultrasound_result": [
+        "子宫：外形增大",
+        "胎儿：现孕38W3D",
+        "宫内见1个胎儿，胎位：目前头位，双顶径：95mm，头围：336mm，腹围：345mm，股骨长：75mm，胎心：134次/分，心律齐，检查过程中见胎心搏动",
+        "胎盘：胎盘位置：后壁，胎盘厚：30mm，胎盘分级：Ⅲ－级，胎盘下缘距内口&gt;70mm",
+        "羊水：羊水指数：24+33+17+0",
+        "（74）胎儿血流：S/DRI脐动脉1.940.48附件：两侧卵巢未显示",
+        "膀胱：未充盈"
+      ]
+    },
+    "center_info": {
+      "baby_voice": "/music/taixin.mp3",
+      "biparietal_diameter": "95mm",
+      "femur_length": "75mm",
+      "fetus_size": "95mm",
+      "fruitName": "大花盆",
+      "placenta_grade": "Ⅲ－级",
+      "placenta_position": "胎盘下缘距内口&gt;70mm",
+      "reference_obj": "/image/dahuapen.jpg"
+    },
+    "top_info": {
+      "baby_arm": "95mm",
+      "baby_weight": "3785",
+      "due_date": "11",
+      "pregnant_days": "3",
+      "pregnant_desc":
+        "现在，宝宝的指甲已经长到了手指和脚趾的末端，头发长到了2厘米左右。这时候宝宝的发质与遗传的关系不大，主要是和孕妈妈孕期的营养有关。",
+      "pregnant_img": "/image/Fetus-38weeks.png",
+      "pregnant_week": "38"
+    }
+  },
+  "msg": "OK",
+  "ret": 1
+}

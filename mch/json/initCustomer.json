@@ -1,0 +1,33 @@
+{
+  "data": {
+    "customerList": [
+      {
+        "age": 29,
+        "birthday": "1987-08-18",
+        "blgHospitalId": "",
+        "childState": "1",
+        "createTime": "2016-07-19 06:45:14",
+        "customerId": 11073,
+        "dateBigCard": null,
+        "dateChildbirth": "2017-03-09",
+        "dateChildbirthChange": "2017-03-27",
+        "dateLmp": "2016-06-02",
+        "dateLmpChange": "2016-06-20",
+        "inPatNo": "D00081672",
+        "isAboutMm": 2,
+        "isPopUp": 1,
+        "mobile": "13817496501",
+        "mobileValidate": "",
+        "name": "万凌芝",
+        "personId": "320723198708181649",
+        "regId": "1000153306",
+        "sex": "女",
+        "superMm": 1,
+        "updateTime": "2017-10-17 16:18:51"
+      }
+    ],
+    "emStatus": "2"
+  },
+  "msg": "成功",
+  "ret": 1
+}

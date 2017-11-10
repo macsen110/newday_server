@@ -19,7 +19,7 @@ var saveUser = {
 			return res.json(result)
 		}
 		var obj = await usermodel.save(username, password)
-		console.log(obj)
+		if (obj.code == 0) req.session.user = username
 		res.json(obj)
 	}
 }

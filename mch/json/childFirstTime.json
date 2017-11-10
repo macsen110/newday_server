@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "applyNo": "1000681592",
+      "createTime": 1477709764000,
+      "customerId": 11073,
+      "id": 1549,
+      "imageType": 2,
+      "imageUrl": "//res.macsen318.com/mch/images/11073_61003_1477709763562.jpg",
+      "imageUrlInit": "//res.macsen318.com/mch/images/11073_61003_1477709763562_init.jpg",
+      "reportDate": "2016-09-27",
+      "reportId": 61003,
+      "reportType": "02",
+      "weekPregnant": 14
+    },
+    {
+      "applyNo": "1000681592",
+      "createTime": 1477709764000,
+      "customerId": 11073,
+      "id": 1550,
+      "imageType": 0,
+      "imageUrl": "//res.macsen318.com/mch/images/11073_61003_1477709763644.jpg",
+      "imageUrlInit": "//res.macsen318.com/mch/images/11073_61003_1477709763644_init.jpg",
+      "reportDate": "2016-09-27",
+      "reportId": 61003,
+      "reportType": "02",
+      "weekPregnant": 14
+    },
+    {
+      "applyNo": "1000634286",
+      "createTime": 1474585694000,
+      "customerId": 11073,
+      "id": 717,
+      "imageType": 0,
+      "imageUrl": "//res.macsen318.com/mch/images/11073_16111_1474585693912.jpg",
+      "imageUrlInit": "//res.macsen318.com/mch/images/11073_16111_1474585693912_init.jpg",
+      "reportDate": "2016-08-05",
+      "reportId": 16111,
+      "reportType": "02",
+      "weekPregnant": 6
+    },
+    {
+      "applyNo": "1000634286",
+      "createTime": 1474585694000,
+      "customerId": 11073,
+      "id": 718,
+      "imageType": 0,
+      "imageUrl": "//res.macsen318.com/mch/images/11073_16111_1474585694178.jpg",
+      "imageUrlInit": "//res.macsen318.com/mch/images/11073_16111_1474585694178_init.jpg",
+      "reportDate": "2016-08-05",
+      "reportId": 16111,
+      "reportType": "02",
+      "weekPregnant": 6
+    },
+    {
+      "applyNo": "1000634286",
+      "createTime": 1474585694000,
+      "customerId": 11073,
+      "id": 719,
+      "imageType": 0,
+      "imageUrl": "//res.macsen318.com/mch/images/11073_16111_1474585694335.jpg",
+      "imageUrlInit": "//res.macsen318.com/mch/images/11073_16111_1474585694335_init.jpg",
+      "reportDate": "2016-08-05",
+      "reportId": 16111,
+      "reportType": "02",
+      "weekPregnant": 6
+    }
+  ],
+  "msg": "OK",
+  "ret": 1
+}

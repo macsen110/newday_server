@@ -23,7 +23,7 @@ function updateByShell (req, res) {
   if (repository === 'newday_client') command = "cd "+config.path.client+" && " + config.gitCommand
   if (repository === 'newday_server') command = "cd "+config.path.server+" && " + config.gitCommand +" && pm2 restart app.js"
   console.log(command)
-  res.end('helloddd, 1111')
+  res.end('hello s ddd, 1111')
   setTimeout(() => {
     let stdout = execSync(command);
     console.log(stdout)

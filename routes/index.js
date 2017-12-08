@@ -10,11 +10,9 @@ module.exports  = function(app) {
 	}
 	router.get('/home', async (req, res, next) => {
 		var a = await resolveAfter2Seconds(req.session.user)
-		console.log(a)
 		res.json({
 			code: 0,
-			isLogin: a,
-			data:[1,25]
+			isLogin: a
 		})
 	})
 	return router;

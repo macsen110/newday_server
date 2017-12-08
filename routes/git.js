@@ -1,5 +1,3 @@
-import { setTimeout } from 'timers';
-
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');

@@ -1,3 +1,5 @@
+import { setTimeout } from 'timers';
+
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -24,8 +26,11 @@ function updateByShell (req, res) {
   if (repository === 'newday_server') command = "cd "+config.path.server+" && " + config.gitCommand +" && pm2 restart app.js"
   console.log(command)
   res.end('hello, shelsdsddddsdljs')
-  let stdout = execSync(command);
-  console.log(stdout)
+  setTimeout(() => {
+    let stdout = execSync(command);
+    console.log(stdout)
+  }, 2000)
+  
   //console.log(111)
 }
 

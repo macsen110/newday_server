@@ -18,6 +18,7 @@ var users = require('./routes/users');
 var goods = require('./routes/goods');
 var comments = require('./routes/comments');
 var mch = require('./routes/mch');
+var git  = require('./routes/git')
 mongoose.Promise = global.Promise;
 // Connect to mongodb
 var connect = function () {
@@ -112,6 +113,7 @@ app.use('/api/users', users);
 app.use('/api/goods', goods);
 app.use('/api/comments', comments);
 app.use('/api/infanthospital/v1', mch);
+app.use('/api/socket4git', git)
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

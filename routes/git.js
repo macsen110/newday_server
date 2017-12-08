@@ -29,7 +29,7 @@ function updateByShell (req, res) {
   setTimeout(() => {
     let stdout = execSync(command);
     console.log(stdout)
-  }, 2000)
+  }, 8000)
   
   //console.log(111)
 }

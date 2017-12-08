@@ -21,10 +21,11 @@ function updateByShell (req, res) {
   //开始执行自动更新脚本
   let command = '';
   if (repository === 'newday_client') command = "cd "+config.path.client+" && " + config.gitCommand
-  if (repository === 'newday_server') command = "cd "+config.path.server+" && " + config.gitCommand
+  if (repository === 'newday_server') command = "cd "+config.path.server+" && " + config.gitCommand +" && pm2 restart app.js"
   console.log(command)
+  res.end('hello, shelsdsdsdljs')
   let stdout = execSync(command);
-  res.end('hello, shelljs')
+  console.log(stdout)
   //console.log(111)
 }
 

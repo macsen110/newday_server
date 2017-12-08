@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var router = express.Router();
-console.log(process.env.NODE_ENV + ' env123')
+console.log(process.env.NODE_ENV + ' env123456')
 const execSync = require('child_process').execSync;
 const syncPathClient = process.env.NODE_ENV === 'production' ? '/home/www/newday_client' : '/Users/macsen/Desktop/Macsen/newday_client'
 const syncPathServer = process.env.NODE_ENV === 'production' ? '/home/www/newday_server' : '/Users/macsen/Desktop/Macsen/newday_server'

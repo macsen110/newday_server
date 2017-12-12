@@ -43,12 +43,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile); 
 
-// app.all('/', function(req, res, next) {
+app.all('/', function(req, res, next) {
   
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "X-Requested-With");
-//   next();
-//  });
+  res.header("Access-Control-Allow-Origin", "http://dev.macsen318.com:9000");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
 
 
 
@@ -66,8 +66,12 @@ var sess = {
 app.use(cookieParser());
 app.use(session(sess));
 app.use(function(req, res, next) {  
-  // res.header("Access-Control-Allow-Origin", "http://10.6.26.38:9001");
-  res.header("Access-Control-Allow-Credentials", true);
+  if (process.env.NODE_ENV !== 'production') {
+      res.header("Access-Control-Allow-Origin", "http://dev.macsen318.com:9000");
+      res.header("Access-Control-Allow-Credentials", true);
+      res.header("Access-Control-Allow-Headers", "Origin,No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With, userId, token");
+      res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE"); //
+  }
   //console.log(req.cookies)
   res.locals.desc = 'this is the desc of the app';
   var ua = req.headers["user-agent"] + "@HTML5";

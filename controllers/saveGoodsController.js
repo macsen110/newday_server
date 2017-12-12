@@ -11,7 +11,6 @@ module.exports = {
 		var title = req.body.title;
 		var category = req.body.category;
 		var files = util.isArray(req.files) ? req.files : [req.files];
-		console.log(files)
 		var content = req.body.content;
 		if (!title && title === '') {
 			result = {
@@ -41,7 +40,7 @@ module.exports = {
 								pathItem.path = setPath(item.path);
 								pathItem.id = 'item_' + index;
 								paths.push(pathItem);				  	
-								if (paths.length === files.length) res(saveGoodsModel.save(title, category, content, paths))
+								if (paths.length === files.length) res(saveGoodsModel.save(title, category, content, paths, req.session.user))
 						})
 					})
 				})
@@ -55,10 +54,10 @@ module.exports = {
 					path: setPath(item.path)
 				})		
 			})
-			obj = await saveGoodsModel.save(title, category, content, paths)
+			obj = await saveGoodsModel.save(title, category, content, paths, req.session.user)
 			
 		}
-		else if (category === 'note') var obj = await saveGoodsModel.save(title, category, content, paths);
+		else if (category === 'note') var obj = await saveGoodsModel.save(title, category, content, paths, req.session.user);
 		res.json(obj)
 	}
 }

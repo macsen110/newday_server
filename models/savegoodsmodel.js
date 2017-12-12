@@ -36,16 +36,17 @@ function insertDocument(doc, targetCollection) {
 			.exec()
 			.then(execSuc.bind(null, targetCollection, doc))
 			.catch(execFaild)
-		
 }
 
 module.exports = {
-	save: function (title, category, content, files) {		
+	save: function (title, category, content, files, user) {	
+		console.log(user)	
 		var doc = {
 			title: title, 
 			category: category, 
 			content: content, 
-			files: files
+			files: files,
+			user: user
 		}
 		return insertDocument(doc,myModel)				
 

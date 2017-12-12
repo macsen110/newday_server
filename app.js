@@ -102,7 +102,7 @@ app.use(function(req, res, next) {
 
 
 app.use(function(req, res, next) {
-  if(req.session.user) req.session.cookie.maxAge = 60000;
+  //if(req.session.user) req.session.cookie.maxAge = 60000;
   next()
 })
  

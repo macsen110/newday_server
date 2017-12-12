@@ -14,7 +14,8 @@ var execCbSuc = (item) => {
 						height: picobjItem.height,
 						width:  picobjItem.width,
 						id: picobj._id + '_' + picobjItem.id,
-						goodsid: picobj._id
+						goodsid: picobj._id,
+						user: picobj.user
 					};	
 				}
 				else {
@@ -23,7 +24,8 @@ var execCbSuc = (item) => {
 						path: picobjItem.path.replace(/\\/g, '/'),
 						category: picobj.category,
 						id: picobj._id + '_' + picobjItem.id,
-						goodsid: picobj._id
+						goodsid: picobj._id,
+						user: picobj.user
 					};
 				}
 			}
@@ -33,7 +35,8 @@ var execCbSuc = (item) => {
 					category: picobj.category,
 					id: picobj._id,
 					goodsid: picobj._id,
-					content: picobj.content
+					content: picobj.content,
+					user: picobj.user
 				}
 			}						
 		})

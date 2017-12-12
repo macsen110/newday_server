@@ -5,7 +5,7 @@ module.exports  = function(app) {
   	return new Promise(resolve => {
 			setTimeout(() => {
 				resolve(x);
-			}, 1000);
+			}, 0);
 		});
 	}
 	router.get('/home', async (req, res, next) => {

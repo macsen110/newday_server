@@ -18,7 +18,6 @@ module.exports= {
 			}
 			return res.json(result);
 		}
-
 		var obj = await usermodel.valid(username, password);
 		if (obj.code == 0) req.session.user = username
 		res.json(obj)

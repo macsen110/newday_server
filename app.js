@@ -44,10 +44,6 @@ app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile); 
 
 app.all('/', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://dev.macsen318.com:9000");
-  res.header("Access-Control-Allow-Credentials", true);
-  res.header("Access-Control-Allow-Headers", "Origin,No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With, userId, token");
-  res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE"); //
   next();
  });
 
@@ -66,12 +62,7 @@ var sess = {
 
 
 app.use(function(req, res, next) {  
-  if (process.env.NODE_ENV !== 'production') {
-      res.header("Access-Control-Allow-Origin", "http://dev.macsen318.com:9000");
-      res.header("Access-Control-Allow-Credentials", true);
-      res.header("Access-Control-Allow-Headers", "Origin,No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With, userId, token");
-      res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE"); //
-  }
+
   //console.log(req.cookies)
   var ua = req.headers["user-agent"] + "@HTML5";
   res.locals.config = {
@@ -94,8 +85,6 @@ app.use(function(req, res, next) {
 app.use(cookieParser());
 app.use(session(sess));
 app.use(function(req, res, next) {
-  //console.log(req.session.cookie)
-  //if(req.session.user) req.session.cookie.maxAge = 60000;
   next()
 })
  

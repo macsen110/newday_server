@@ -43,9 +43,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile); 
 
-app.all('/', function(req, res, next) {
-  next();
- });
+
 
 
 
@@ -59,7 +57,8 @@ var sess = {
   },
 };
 
-
+app.use(cookieParser());
+app.use(session(sess));
 
 app.use(function(req, res, next) {  
 
@@ -82,8 +81,7 @@ app.use(function(req, res, next) {
 })
 
 
-app.use(cookieParser());
-app.use(session(sess));
+
 app.use(function(req, res, next) {
   next()
 })

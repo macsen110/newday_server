@@ -5,6 +5,7 @@ var multer = require('multer');
 var app = express();
 var fs = require('fs');
 var path = require('path');
+var tools = require('../tools')
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     var dirpath = 'resource/zone/' + path.extname(file.originalname).slice(1);
@@ -46,9 +47,9 @@ router.use(bodyParser.urlencoded({
     extended: true
 }));
 router.get('/list', showGoodsController.show)
-router.post('/upload', upload.array('pics',10), saveGoodsController.save)
+router.post('/upload', tools.requireAuthentication, upload.array('pics',10), saveGoodsController.save)
 router.get('/detail/:id', showDetailController.show)
-router.delete('/delete/:id', function (req, res) {
+router.delete('/delete/:id', tools.requireAuthentication, function (req, res) {
     deleteGoodsController(req.params.id, res)
 })
 module.exports = router;

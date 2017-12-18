@@ -14,12 +14,13 @@ exports.show = async function (goodsid) {
 						content: item.content,
 						files: item.files,
 						id: item._id,
+						user: item.user
 					}
 				});
 		},
 		commets: function (callback) {
 			return CmyModel
-				.find({C_goodid: goodsid}, {C_content: 1, C_goodsid: 1})
+				.find({C_goodid: goodsid}, {C_content: 1, C_goodsid: 1, C_user: 1})
 				.exec()
 				.then()
 				.catch()

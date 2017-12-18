@@ -5,6 +5,7 @@ var execSuc = (item) => {
 		obj.code = 0;
 		obj.msg = 'ok';
 		obj.isLogin = 1;
+		obj.user = item[0].name;
 	}
 	else {
 		obj.code = 1;
@@ -13,7 +14,6 @@ var execSuc = (item) => {
 	return obj;
 }
 var execFaild = (err) => {
-	console.log(err)
 	var obj = {};
 	obj.code = 1;
 	obj.msg = 'exec go wrong';

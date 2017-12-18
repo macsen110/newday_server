@@ -9,18 +9,17 @@ var execSuc = (task, item) => {
 	return task.save().then(saveSuc).catch(saveErr)
 }
 var execFaild = (err) => {
-	console.log(err)
 	var obj = {};
 	obj.code = 1;
 	obj.msg = 'exec go wrong';
 	return obj;
 }
-var saveSuc = () => {
-	
+var saveSuc = (res) => {
 	var obj = {};
 	obj.code = 0;
 	obj.msg = 'ok,';
 	obj.isLogin = 1;
+	obj.user = res.name;
 	return obj
 }
 

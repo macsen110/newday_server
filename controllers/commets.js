@@ -3,7 +3,7 @@ module.exports = {
 	save: async function (req, res) {
 		var goodsid = req.body.goodsid;
 		var content = req.body.comment;
-		var obj = await commetModel.save(goodsid, content)
+		var obj = await commetModel.save(goodsid, content, req.session.user)
 		res.json(obj)
 	},
 	deleteCommet: async function (req, res) {

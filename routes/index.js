@@ -12,7 +12,8 @@ module.exports  = function(app) {
 		var a = await resolveAfter2Seconds(req.session.user)
 		res.json({
 			code: 0,
-			isLogin: a
+			isLogin: a ? true : false,
+			user: a
 		})
 	})
 	return router;

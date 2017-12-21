@@ -3,7 +3,7 @@ var execSuc = (task, item) => {
 	var obj = {};
 	if (item.length) {
 		obj.code = 1;
-		obj.msg = 'user has been exist';
+		obj.msg = '用户名已存在,请换一个';
 		return obj;
 	}
 	return task.save().then(saveSuc).catch(saveErr)
@@ -17,7 +17,7 @@ var execFaild = (err) => {
 var saveSuc = (res) => {
 	var obj = {};
 	obj.code = 0;
-	obj.msg = 'ok,';
+	obj.msg = '恭喜您, 注册成功';
 	obj.isLogin = 1;
 	obj.user = res.name;
 	return obj
@@ -26,7 +26,7 @@ var saveSuc = (res) => {
 var saveErr = (err) => {
 	var obj = {};
 	obj.code = 1;
-	obj.msg = 'save go wrong';
+	obj.msg = '存储失败,请稍后再试';
 	return obj;
 }
 

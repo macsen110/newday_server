@@ -53,7 +53,7 @@ var sess = {
   secret: 'keyboard',
   rolling: true,
   cookie: {
-    maxAge:6000 * 60
+    maxAge:1000 * 60 * 10
   },
 };
 
@@ -77,7 +77,7 @@ app.use(function(req, res, next) {
   //res.setHeader('Cache-Control', 'max-age=0')
   //res.setHeader('Etag', 'qa133311')
   next();
-  
+  console.log(req.session)
 })
 
 

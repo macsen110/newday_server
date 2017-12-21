@@ -1,4 +1,5 @@
 var myModel = require('./goodsModelConnection');
+
 var path = require('path');
 var execCbSuc = (item) => {
 	var obj = {}
@@ -18,6 +19,7 @@ var execCbSuc = (item) => {
 						user: picobj.user,
 						_time: picobj._time,
 						content: picobj.content,
+						comment_count: picobj.comment_count
 					};	
 				}
 				else {
@@ -30,6 +32,7 @@ var execCbSuc = (item) => {
 						user: picobj.user,
 						_time: picobj._time,
 						content: picobj.content,
+						comment_count: picobj.comment_count
 					};
 				}
 			}
@@ -41,7 +44,8 @@ var execCbSuc = (item) => {
 					goodsid: picobj._id,
 					content: picobj.content,
 					user: picobj.user,
-					_time: picobj._time
+					_time: picobj._time,
+					comment_count: picobj.comment_count
 				}
 			}						
 		})

@@ -1,4 +1,5 @@
 var myModel = require('./commentsModelConnection');
+var goodsModel = require('./goodsModelConnection');
 module.exports = {
 	save: function(goodsid, comment, user) {
 		var obj = {};
@@ -9,6 +10,9 @@ module.exports = {
 			C_goodid: goodsid,
 			C_user: user
 		});
+		goodsModel
+		.find({_id: goodsid})
+		.update({_id : goodsid}, {$inc : {comment_count : 1}})
 		return task.save()
 			.then((res) => {
 				obj.code = 0;
@@ -27,6 +31,7 @@ module.exports = {
 	},
 	deleteCommet: function (id) {
 		var obj = {};
+		goodsModel.update({_id : goodsid}, {$inc : {comment_count : -1}})
 		return myModel.remove({_id: id})
 			.then(res => {return {code: 0}})
 			.catch(err => {return { code: 1 }})		

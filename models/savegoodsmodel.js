@@ -5,6 +5,7 @@ var myModel = require('./goodsModelConnection');
 var execSuc = (targetCollection, doc, item) => {
 	seq = (item && item.length) ? item[0]._id + 1  : 1;
 	doc._id = seq;
+	doc._time = Date.now();
 	var task = new targetCollection(doc);
 	return task.save().then(saveSuc).catch(saveErr)
 }

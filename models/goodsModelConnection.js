@@ -6,7 +6,8 @@ var Schema = new mongoose.Schema({
  	content: String,
  	files: Array, 
 	 _id: Number,
-	 user: String
+	 user: String,
+	 _time: Number
 });
 module.exports = mongoose.model('goods',Schema);
 

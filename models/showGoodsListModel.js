@@ -15,7 +15,9 @@ var execCbSuc = (item) => {
 						width:  picobjItem.width,
 						id: picobj._id + '_' + picobjItem.id,
 						goodsid: picobj._id,
-						user: picobj.user
+						user: picobj.user,
+						_time: picobj._time,
+						content: picobj.content,
 					};	
 				}
 				else {
@@ -25,7 +27,9 @@ var execCbSuc = (item) => {
 						category: picobj.category,
 						id: picobj._id + '_' + picobjItem.id,
 						goodsid: picobj._id,
-						user: picobj.user
+						user: picobj.user,
+						_time: picobj._time,
+						content: picobj.content,
 					};
 				}
 			}
@@ -36,7 +40,8 @@ var execCbSuc = (item) => {
 					id: picobj._id,
 					goodsid: picobj._id,
 					content: picobj.content,
-					user: picobj.user
+					user: picobj.user,
+					_time: picobj._time
 				}
 			}						
 		})

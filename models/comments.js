@@ -10,9 +10,14 @@ module.exports = {
 			C_goodid: goodsid,
 			C_user: user
 		});
-		goodsModel
-		.find({_id: goodsid})
-		.update({_id : goodsid}, {$inc : {comment_count : 1}})
+		try {
+			goodsModel
+			.update({_id : goodsid}, {$inc : {comment_count : 1}})
+			.then()
+			.catch(e => {})
+		} catch (e) {
+			console.log(e)
+		}
 		return task.save()
 			.then((res) => {
 				obj.code = 0;
@@ -29,9 +34,12 @@ module.exports = {
 			)
 
 	},
-	deleteCommet: function (id) {
+	deleteCommet: function (goodsid, id) {
 		var obj = {};
-		goodsModel.update({_id : goodsid}, {$inc : {comment_count : -1}})
+		goodsModel
+		.update({_id : goodsid}, {$inc : {comment_count : -1}})
+		.then()
+		.catch(e => {})
 		return myModel.remove({_id: id})
 			.then(res => {return {code: 0}})
 			.catch(err => {return { code: 1 }})		

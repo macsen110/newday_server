@@ -77,7 +77,6 @@ app.use(function(req, res, next) {
   //res.setHeader('Cache-Control', 'max-age=0')
   //res.setHeader('Etag', 'qa133311')
   next();
-  console.log(req.session)
 })
 
 

@@ -28,5 +28,5 @@ router.post('/getChildInfo', (req, res) => res.json(getConfig('getChildInfo')))
 router.post('/motherNote', (req, res) => res.json(getConfig('motherNote')))
 router.post('/childInfo', (req, res) => res.json(getConfig('childInfo')))
 router.post('/getReportListDetail', (req, res) => res.json(getConfig('getReportListDetail')))
-router.post('/getQueueInfo', (req, res) => res.json(getConfig('/getQueueInfo')))
+router.post('/getQueueInfo', (req, res) => res.json(getConfig('getQueneInfo')))
 module.exports = router;

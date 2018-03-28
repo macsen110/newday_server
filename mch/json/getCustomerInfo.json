@@ -1,0 +1,33 @@
+{
+  "data": {
+    "customerList": [
+      {
+        "age": 34,
+        "birthday": "1982-08-27",
+        "blgHospitalId": "",
+        "childState": "0",
+        "createTime": "2017-03-02 15:21:45",
+        "customerId": 44294,
+        "dateBigCard": null,
+        "dateChildbirth": "2017-11-08",
+        "dateChildbirthChange": "2018-02-21",
+        "dateLmp": "2017-02-01",
+        "dateLmpChange": "2017-05-17",
+        "inPatNo": "",
+        "isAboutMm": 1,
+        "isPopUp": 0,
+        "mobile": "18616253939",
+        "mobileValidate": "",
+        "name": "张**",
+        "personId": "370105198208275028",
+        "regId": "",
+        "sex": "女",
+        "superMm": 1,
+        "updateTime": "2018-01-31 13:03:47"
+      }
+    ],
+    "emStatus": "2"
+  },
+  "msg": "成功",
+  "ret": 0
+}

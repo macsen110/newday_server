@@ -19,6 +19,7 @@ var goods = require('./routes/goods');
 var comments = require('./routes/comments');
 var mch = require('./routes/mch');
 var git  = require('./routes/git')
+const cluster = require('cluster');
 mongoose.Promise = global.Promise;
 // Connect to mongodb
 var connect = function () {
@@ -138,6 +139,15 @@ else {
   });
   port = 80
 }
-server.listen(3000);
+if (cluster.isMaster) {
+  const numCPUs = require('os').cpus().length;
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+}
+else {
+  server.listen(3000);
+}
+
 module.exports = app;
 

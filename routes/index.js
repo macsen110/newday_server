@@ -8,10 +8,10 @@ module.exports  = function(app) {
 			}, 0);
 		});
 	}
-	router.get('/home', async (req, res, next) => {
+	router.use('/home', async (req, res, next) => {
 		var a = await resolveAfter2Seconds(req.session.user)
 		res.json({
-			code: 0,
+			code: 1,
 			isLogin: a ? true : false,
 			user: a
 		})

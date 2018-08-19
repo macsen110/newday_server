@@ -24,7 +24,6 @@ var saveSuc = () => {
 }
 
 var saveErr = (err) => {
-	console.log(err)
 	return {
 		err: err
 	}

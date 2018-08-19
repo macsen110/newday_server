@@ -21,10 +21,8 @@ function updateByShell (req, res) {
   let command = '';
   if (repository === 'newday_client') command = "cd "+config.path.client+" && " + config.gitCommand
   if (repository === 'newday_server') command = "cd "+config.path.server+" && " + config.gitCommand +" && pm2 restart app.js"
-  console.log(command)
   res.end('hello s eee, 1111')
   let stdout = execSync(command);
-  console.log(stdout)
 }
 
 module.exports = router;

@@ -6,5 +6,5 @@ var tools = require('../tools')
 router.use(bodyParser.json());
 // define the home page route
 router.post('/', tools.requireAuthentication, commetController.save)
-router.delete('/:id', tools.requireAuthentication, commetController.deleteCommet)
+router.delete('/:goodsId/:id', tools.requireAuthentication, commetController.deleteCommet)
 module.exports = router;

@@ -7,19 +7,22 @@ module.exports= {
 		if (!username && username === '') {
 			result = {
 				code: 1,
-				msg: 'user name can not be empty'
+				msg: '姓名不能为空'
 			}
 			return res.json(result);
 		}
 		if (!password && password === '') {
 			result = {
 				code: 1,
-				msg: 'password name can not be empty'
+				msg: '密码不能为空'
 			}
 			return res.json(result);
 		}
 		var obj = await usermodel.valid(username, password);
-		if (obj.code == 0) req.session.user = username
+		if (obj.code == 0) {
+			req.session.maxAge = 60 * 1000 * 60;
+			req.session.user = username
+		}
 		res.json(obj)
 		
 	}

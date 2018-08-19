@@ -15,6 +15,7 @@ function getConfig(file){
 }
 
 //assume that config.json is in application root
+router.post('/getCustomerInfo', (req, res) => res.json(getConfig('getCustomerInfo')))
 router.get('/getToken', (req, res) => res.json(getConfig('token')));
 router.post('/initCustomer', (req, res) => res.json(getConfig('initCustomer')));
 router.post('/customerHistory', (req, res) => res.json(getConfig('customerHistory')))
@@ -27,5 +28,5 @@ router.post('/getChildInfo', (req, res) => res.json(getConfig('getChildInfo')))
 router.post('/motherNote', (req, res) => res.json(getConfig('motherNote')))
 router.post('/childInfo', (req, res) => res.json(getConfig('childInfo')))
 router.post('/getReportListDetail', (req, res) => res.json(getConfig('getReportListDetail')))
-router.post('/getQueueInfo', (req, res) => res.json(getConfig('/getQueueInfo')))
+router.post('/getQueueInfo', (req, res) => res.json(getConfig('getQueneInfo')))
 module.exports = router;

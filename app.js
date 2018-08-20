@@ -19,6 +19,7 @@ var goods = require('./routes/goods');
 var comments = require('./routes/comments');
 var mch = require('./routes/mch');
 var git  = require('./routes/git')
+var testvideo = require('./routes/testvideo')
 const cluster = require('cluster');
 mongoose.Promise = global.Promise;
 // Connect to mongodb
@@ -89,6 +90,7 @@ app.use(function(req, res, next) {
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use('/api', routes);
+app.use('/api/testvideo', testvideo);
 app.use('/api/users', users);
 app.use('/api/goods', goods);
 app.use('/api/comments', comments);

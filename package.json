@@ -16,6 +16,7 @@
     "history": "^4.6.1",
     "immutable": "^3.7.5",
     "imports": "^1.0.0",
+    "moment": "^2.22.2",
     "mongoose": "^4.0.7",
     "morgan": "~1.5.3",
     "multer": "^1.0.1",
@@ -26,6 +27,5 @@
     "websocket": "^1.0.21",
     "ws": "^0.7.2"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

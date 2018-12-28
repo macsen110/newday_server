@@ -104,6 +104,41 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/tmp', express.static(__dirname + '/tmp'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// const webPush = require('web-push');
+
+// const pushSubscription = {
+//   "endpoint":"https://fcm.googleapis.com/fcm/send/ed12RduSDc4:APA91bHo-1lv42jtgdPMGnpIT18vk2Lvz9HtCkCaEaHLOvnNHHWqdsvZuFCyaFZenoDn2X4Y8szLp6tlxldusj-eGLzgMswjZ21yzDdBKZoZN1g5R1wz6AadYV6yH4O_w-fR_sbwFCFx",
+//   "expirationTime":null,
+//   "keys":{"p256dh":"BNiwMsOZYlTGVUwiEBwuPS2LUxg8SpE49R0VWT3L7h5gHXHhdNGwZCCUNZOmrYDYaxw53n01J3WuJavHAHCBiV8","auth":"DOtvEBeFHvhcPVgbR8vblA"}
+// };
+
+// // TODO 4.3a - include VAPID keys
+
+// const payload = 'Here is a payload!';
+
+// const options = {
+//   //gcmAPIKey: 'sOdpiaDympjIvLVPuMTH-T4lh4npk8erYrDs4IjXzpA',
+//   TTL: 60,
+
+//   // TODO 4.3b - add VAPID details
+
+// };
+// try {
+//   webPush.setVapidDetails(
+//     'mailto:839945193@qq.com',
+//     'BKHC0w2c7ml3tjiqgYd27jUCrEKqhzZ3p5-Uhne7Y-HPjadkOo5nWnUNC72lxPlQGgB3yMKHZXC3RyFA6wlR5DE',
+//     'sOdpiaDympjIvLVPuMTH-T4lh4npk8erYrDs4IjXzpA'
+//   );
+  
+//   webPush.sendNotification(
+//     pushSubscription,
+//     payload,
+//     options
+//   ).catch(e => console.log(e));
+// }
+// catch (e) {
+//   console.log(e)
+// }
 
 
 // catch 404 and forward to error handler

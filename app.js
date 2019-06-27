@@ -21,7 +21,11 @@ var comments = require('./routes/comments');
 var mch = require('./routes/mch');
 var git  = require('./routes/git')
 var testvideo = require('./routes/testvideo')
-const cluster = require('cluster');
+var wx_lites = require('./routes/wx_lites')
+var cluster = require('cluster');
+var schedule = require('node-schedule');
+var token = require('./wx/token')
+
 mongoose.Promise = global.Promise;
 // Connect to mongodb
 var connect = function () {
@@ -95,6 +99,7 @@ app.use('/api/testvideo', testvideo);
 app.use('/api/users', users);
 app.use('/api/goods', goods);
 app.use('/api/comments', comments);
+app.use('/api/wx_lites', wx_lites)
 app.use('/api/im_av', imAvLogs)
 app.use('/api/infanthospital/v1', mch);
 app.use('/api/socket4git', git)
@@ -103,6 +108,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/tmp', express.static(__dirname + '/tmp'));
 app.use(express.static(path.join(__dirname, 'public')));
+// token.reflushToken()
+// schedule.scheduleJob('* */30 * * * *', function(){
+//   token.reflushToken()
+// });
 
 // const webPush = require('web-push');
 
@@ -179,14 +188,16 @@ else {
   port = 80
 }
 if (cluster.isMaster) {
+  console.log('master')
   const numCPUs = require('os').cpus().length;
   for (let i = 0; i < numCPUs; i++) {
     cluster.fork();
   }
 }
 else {
+  console.log('cluster')
   server.listen(3000);
 }
-
+//server.listen(3000);
 module.exports = app;
 

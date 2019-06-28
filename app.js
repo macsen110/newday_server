@@ -108,10 +108,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/tmp', express.static(__dirname + '/tmp'));
 app.use(express.static(path.join(__dirname, 'public')));
-// token.reflushToken()
-// schedule.scheduleJob('* */30 * * * *', function(){
-//   token.reflushToken()
-// });
+token.reflushToken()
+schedule.scheduleJob('*/30 * * * *', function(){
+  token.reflushToken()
+});
 
 // const webPush = require('web-push');
 

@@ -19,7 +19,7 @@ var saveSuc = (res) => {
 	var obj = {};
 	obj.code = 0;
 	obj.msg = '恭喜您, 注册成功';
-	obj.isLogin = 1;
+	obj.isLogin = true;
 	obj.user = res.name;
 	return obj
 }
@@ -35,7 +35,7 @@ var updateSuc = (res) => {
 	var obj = {};
 	obj.code = 0;
 	obj.msg = '更新成功';
-	obj.isLogin = 1;
+	obj.isLogin = true;
 	obj.user = res.name;
 	return obj
 }

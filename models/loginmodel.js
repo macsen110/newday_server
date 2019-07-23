@@ -4,7 +4,7 @@ var execSuc = (item) => {
 	if (item.length) {
 		obj.code = 0;
 		obj.msg = '登录成功';
-		obj.isLogin = 1;
+		obj.isLogin = true;
 		obj.user = item[0].name;
 	}
 	else {

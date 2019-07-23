@@ -187,17 +187,17 @@ else {
   });
   port = 80
 }
-if (cluster.isMaster) {
-  console.log('master')
-  const numCPUs = require('os').cpus().length;
-  for (let i = 0; i < numCPUs; i++) {
-    cluster.fork();
-  }
-}
-else {
-  console.log('cluster')
-  server.listen(3000);
-}
-//server.listen(3000);
+// if (cluster.isMaster) {
+//   console.log('master')
+//   const numCPUs = require('os').cpus().length;
+//   for (let i = 0; i < numCPUs; i++) {
+//     cluster.fork();
+//   }
+// }
+// else {
+//   console.log('cluster')
+//   server.listen(3000);
+// }
+server.listen(3000);
 module.exports = app;
 

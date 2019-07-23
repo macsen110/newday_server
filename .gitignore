@@ -26,3 +26,4 @@ node_modules
 resource/zone
 # Users Environment Variables
 .lock-wscript
+logs

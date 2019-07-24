@@ -10,7 +10,6 @@ exports.getToken = () => {
 exports.reflushToken = () => {
   request.get(api + '?grant_type=client_credential&appid='+appid+'&secret='+secret, (err, res, body) => {
     token = JSON.parse(body).access_token
-    console.log(token)
   })
 }
 exports.token = token;

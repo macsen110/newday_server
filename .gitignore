@@ -27,3 +27,4 @@ resource/zone
 # Users Environment Variables
 .lock-wscript
 logs
+config/tcb.js

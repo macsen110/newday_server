@@ -42,9 +42,7 @@ mongoose.connection.on('connected', function () {
 
 
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
+
 
 var sess = {
   resave: false,

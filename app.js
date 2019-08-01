@@ -37,13 +37,10 @@ mongoose.connection.on('disconnected', connect);
 mongoose.connection.on('connected', function () {
   console.log('connected')
 })
-
-
-
-
-
-
-
+token.reflushToken()
+schedule.scheduleJob('*/30 * * * *', function () {
+  token.reflushToken()
+});
 var sess = {
   resave: false,
   saveUninitialized: true,
@@ -62,9 +59,12 @@ app.use(log4js.connectLogger(log4js.getLogger("http"), {
   }
 }));
 
-
+app.use('/tmp', express.static(__dirname + '/tmp'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(session(sess));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ limit: '50mb',extended: true }));
 
 app.use(function (req, res, next) {
 
@@ -102,14 +102,7 @@ app.use('/api/wx_lites', wx_lites)
 app.use('/api/im_av', imAvLogs)
 app.use('/api/infanthospital/v1', mch);
 app.use('/api/socket4git', git)
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/tmp', express.static(__dirname + '/tmp'));
-app.use(express.static(path.join(__dirname, 'public')));
-token.reflushToken()
-schedule.scheduleJob('*/30 * * * *', function () {
-  token.reflushToken()
-});
+
 
 
 var port;

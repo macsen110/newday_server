@@ -1,6 +1,4 @@
 var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
 var router = express.Router();
 const execSync = require('child_process').execSync;
 const syncPathClient = process.env.NODE_ENV === 'production' ? '/home/www/newday_client' : '/Users/macsen/Desktop/Macsen/newday_client'
@@ -12,8 +10,6 @@ const config = {
   },
   gitCommand: 'git pull'
 }
-router.use(bodyParser.urlencoded({ extended: true }));
-router.use(bodyParser.json());
 router.post('/', (req, res)=> updateByShell(req, res))
 function updateByShell (req, res) {
   let repository = req.body.repository.name;
@@ -22,7 +18,7 @@ function updateByShell (req, res) {
   if (repository === 'newday_client') command = "cd "+config.path.client+" && " + config.gitCommand
   if (repository === 'newday_server') command = "cd "+config.path.server+" && " + config.gitCommand +" && pm2 restart app.js"
   res.end('hello s eee, 1111')
-  let stdout = execSync(command);
+  execSync(command);
 }
 
 module.exports = router;

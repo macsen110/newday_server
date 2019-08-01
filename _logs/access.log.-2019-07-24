@@ -1,0 +1,34 @@
+[2019-07-24T22:17:56.724] [ERROR] http - Something went wrong: {"code":0,"isLogin":false}
+[2019-07-24T22:17:56.731] [INFO] http - 127.0.0.1 GET /api/home undefined 200 11 
+[2019-07-24T22:20:49.545] [INFO] http - 127.0.0.1 GET /api/wx_lites/tcbCallFun undefined 200 1066 
+[2019-07-24T22:34:23.197] [ERROR] http - 127.0.0.1 POST /api/socket4git {} 415 8 
+[2019-07-24T22:36:16.055] [INFO] http - 127.0.0.1 GET /api/wx_lites/tcbCallFun undefined 200 1018 
+[2019-07-24T22:36:36.478] [ERROR] http - Something went wrong: {"code":0,"isLogin":false}
+[2019-07-24T22:36:36.479] [WARN] http - 127.0.0.1 GET /api/home undefined 304 5 
+[2019-07-24T22:36:40.466] [ERROR] http - Something went wrong: {"code":0,"isLogin":false}
+[2019-07-24T22:36:40.467] [WARN] http - 127.0.0.1 GET /api/home undefined 304 3 
+[2019-07-24T22:36:43.872] [ERROR] http - Something went wrong: {"code":0,"isLogin":false}
+[2019-07-24T22:36:43.873] [INFO] http - 127.0.0.1 GET /api/home undefined 200 3 
+[2019-07-24T22:36:46.450] [INFO] http - 127.0.0.1 GET /api/goods/list {} 200 16 
+[2019-07-24T22:36:52.600] [WARN] http - 127.0.0.1 GET /api/goods/list {} 304 4 
+[2019-07-24T22:36:54.918] [WARN] http - 127.0.0.1 GET /api/goods/list {} 304 2 
+[2019-07-24T22:37:00.896] [WARN] http - 127.0.0.1 GET /api/goods/list {} 304 3 
+[2019-07-24T22:37:09.971] [INFO] http - 127.0.0.1 POST /api/users/validuser {"username":"aaa","password":"111","test":null} 200 15 
+[2019-07-24T22:37:46.507] [ERROR] http - Something went wrong: {"code":0,"isLogin":true,"user":"aaa"}
+[2019-07-24T22:37:46.508] [INFO] http - 127.0.0.1 GET /api/home undefined 200 3 
+[2019-07-24T22:38:57.750] [INFO] http - 127.0.0.1 POST /api/goods/upload?time=1563979137000 {"title":"another beautiful day","category":"image","content":"en"} 200 212 
+[2019-07-24T22:39:00.834] [INFO] http - 127.0.0.1 GET /api/goods/list {} 200 3 
+[2019-07-24T22:39:08.796] [INFO] http - 127.0.0.1 GET /api/users/logout {} 200 1 
+[2019-07-24T22:39:16.752] [INFO] http - 127.0.0.1 GET /api/infanthospital/v1/getToken?_=1563979156669 undefined 200 2 
+[2019-07-24T22:39:16.812] [INFO] http - 127.0.0.1 POST /api/infanthospital/v1/initCustomer?_=1563979156761 undefined 200 2 
+[2019-07-24T22:39:16.922] [INFO] http - 127.0.0.1 POST /api/infanthospital/v1/getBookInfo?_=1563979156864 undefined 200 2 
+[2019-07-24T22:39:17.041] [INFO] http - 127.0.0.1 POST /api/infanthospital/v1/getBookInfoInterface?_=1563979156988 undefined 200 2 
+[2019-07-24T22:39:17.125] [INFO] http - 127.0.0.1 POST /api/infanthospital/v1/getAllReportList?_=1563979157072 undefined 200 3 
+[2019-07-24T22:39:27.619] [INFO] http - 127.0.0.1 POST /api/infanthospital/v1/initCustomer?_=1563979167531 undefined 200 1 
+[2019-07-24T22:39:27.744] [INFO] http - 127.0.0.1 POST /api/infanthospital/v1/getAllReportList?_=1563979167693 undefined 200 3 
+[2019-07-24T22:39:27.780] [INFO] http - 127.0.0.1 POST /api/infanthospital/v1/getAllReportList?_=1563979167729 undefined 200 2 
+[2019-07-24T22:39:36.792] [INFO] http - 127.0.0.1 POST /api/infanthospital/v1/childFirstTime?_=1563979176735 undefined 200 8 
+[2019-07-24T22:39:45.564] [INFO] http - 127.0.0.1 POST /api/infanthospital/v1/motherNote?_=1563979185494 undefined 200 19 
+[2019-07-24T22:39:45.733] [ERROR] http - 127.0.0.1 POST /api/infanthospital/v1/getTicket?_=1563979185682 {"request_context":{"system":"ios","app_version":"9","access_token":"123","system_version":"7.0","phone_model":"iphone6","meid":"SASDASDSD","p_version":"1.1.2","url":"https://www.macsen318.com/mch/?pageName=antenatal"},"access_token":"BohWXCjVqjUk2GTI255-lhlkXv4PbBuA5XowSnf6rfveMcWdmuZUZ6zT1++5zVLL01__1f2a48f6d1a473b96dcc2eb15467e4a9__1508237681744","system":"mch"} 404 3 
+[2019-07-24T22:40:36.453] [INFO] http - 127.0.0.1 GET /api/wx_lites/users undefined 200 1178 
+[2019-07-24T22:40:49.698] [INFO] http - 127.0.0.1 GET /api/wx_lites/tcbCallFun undefined 200 785 

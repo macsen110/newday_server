@@ -7,6 +7,7 @@ var server = require('http').Server(app);
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var RedisStore = require('connect-redis')(session);
 var mongoose = require('mongoose');
 var settings = require('./config/settings');
 var routes = require('./routes/index')(app);
@@ -49,6 +50,7 @@ var sess = {
   cookie: {
     maxAge: 1000 * 60 * 10
   },
+  store: new RedisStore({})
 };
 app.use(log4js.connectLogger(log4js.getLogger("http"), {
   level: 'auto',

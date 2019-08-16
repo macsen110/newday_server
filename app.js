@@ -23,6 +23,7 @@ var wx_lites = require('./routes/wx_lites')
 var schedule = require('node-schedule');
 var token = require('./wx/token')
 var log4js = require('./log')
+var redisConfig = require('./config/redis')
 mongoose.Promise = global.Promise;
 // Connect to mongodb
 var connect = function () {
@@ -42,15 +43,17 @@ token.reflushToken()
 schedule.scheduleJob('*/30 * * * *', function () {
   token.reflushToken()
 });
+
 var sess = {
+  name: 'JSESSIONID',
   resave: false,
   saveUninitialized: true,
   secret: 'keyboard',
   rolling: true,
   cookie: {
-    maxAge: 1000 * 60 * 10
+    //maxAge: 1000 * 10 * 30
   },
-  store: new RedisStore({})
+  store: new RedisStore({ ...redisConfig })
 };
 app.use(log4js.connectLogger(log4js.getLogger("http"), {
   level: 'auto',
@@ -66,10 +69,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(session(sess));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ limit: '50mb',extended: true }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 app.use(function (req, res, next) {
-
   //console.log(req.cookies)
   var ua = req.headers["user-agent"] + "@HTML5";
   res.locals.config = {
@@ -142,6 +144,7 @@ else {
 //   console.log('cluster')
 //   server.listen(3000);
 // }
+
 server.listen(3000);
 module.exports = app;
 

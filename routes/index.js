@@ -3,6 +3,8 @@ var router = express.Router();
 var log4js = require('../log')
 var _log = log4js.getLogger("http")
 var redisConfig = require('../config/redis')
+var fs = require('fs')
+var path = require('path')
 function resolveAfter2Seconds(user, sessionID) {
   console.log('sessionID: ', sessionID)
   return new Promise(resolve => {
@@ -16,6 +18,11 @@ function resolveAfter2Seconds(user, sessionID) {
   });
 }
 module.exports = function(app) {
+  router.use("/MP_verify_QN72brFHSLX0PSjp.txt", (req, res) => {
+    res.set('Content-Type', 'text/plain')
+    var content = fs.readFileSync(path.join(__dirname, 'MP_verify_QN72brFHSLX0PSjp.txt'), "utf8")
+    res.send(content)
+  })
   router.use("/home", async (req, res, next) => {
     var a = await resolveAfter2Seconds(req.session.user, req.sessionID);
     _log.error("Something went wrong:", JSON.stringify({

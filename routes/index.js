@@ -36,5 +36,13 @@ module.exports = function(app) {
       user: a
     });
   });
+  router.use("/oauth2", (req, res) => {
+    var _query = req.query
+    var _location = decodeURIComponent(_query.redirect_url)
+    var _code = _query.code;
+    var _seq =  _location.indexOf('?') !== -1 ? '&' : "?"
+    res.redirect(_location + _seq +  'code='+_code)
+    
+  })
   return router;
 };

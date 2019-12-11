@@ -19,6 +19,7 @@ var mch = require('./routes/mch');
 var git = require('./routes/git')
 var testvideo = require('./routes/testvideo')
 var wx_lites = require('./routes/wx_lites')
+var newday318 = require('./routes/newday318')
 //var cluster = require('cluster');
 var schedule = require('node-schedule');
 var token = require('./wx/token')
@@ -104,7 +105,7 @@ app.use('/api/wx_lites', wx_lites)
 app.use('/api/im_av', imAvLogs)
 app.use('/api/infanthospital/v1', mch);
 app.use('/api/socket4git', git)
-
+app.use('/api/newday318', newday318)
 
 
 var port;

@@ -4,14 +4,14 @@ var saveUser = {
 		var result = {};
 		var username = req.body.username;
 		var password = req.body.password;
-		if (!username && username === '') {
+		if (!username) {
 			result = {
 				code: 1,
 				msg: 'user name can not be empty'
 			}
 			return res.json(result)
 		}
-		if (!password && password === '') {
+		if (!password) {
 			result = {
 				code: 1,
 				msg: 'password name can not be empty'

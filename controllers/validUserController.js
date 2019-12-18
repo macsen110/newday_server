@@ -4,14 +4,14 @@ module.exports= {
 		var result = {};
 		var username = req.body.username;
 		var password = req.body.password;
-		if (!username && username === '') {
+		if (!username) {
 			result = {
 				code: 1,
 				msg: '姓名不能为空'
 			}
 			return res.json(result);
 		}
-		if (!password && password === '') {
+		if (!password) {
 			result = {
 				code: 1,
 				msg: '密码不能为空'
